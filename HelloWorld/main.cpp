@@ -16,6 +16,14 @@ int main()
 	cout << "Lionel \"la pulga\" Messi\n";
 
 	cout << "Esta es otra linea";
+	
+	int miEntero; //4 bytes
+	char miCaracter; //1 byte
+	bool miBoolean; //1 byte
+	float miFlotante; //4 byte
+	double miDouble; //8 bytes
+
+	cout << "\n\nValor de miVariable: " << miVariable;
 
 	_getch();
 }
