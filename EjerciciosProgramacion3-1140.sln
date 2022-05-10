@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Semana3", "Semana3", "{5CD6
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EjemploSobrecargaOperadores", "EjemploSobrecargaOperadores\EjemploSobrecargaOperadores.vcxproj", "{EF77992F-717B-4EEC-9D9A-57B45C26927A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EjemploSobrecargaBinario", "EjemploSobrecargaBinario\EjemploSobrecargaBinario.vcxproj", "{299A2CF2-55AD-4207-BDA7-06A14C78BDC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -67,6 +69,14 @@ Global
 		{EF77992F-717B-4EEC-9D9A-57B45C26927A}.Release|x64.Build.0 = Release|x64
 		{EF77992F-717B-4EEC-9D9A-57B45C26927A}.Release|x86.ActiveCfg = Release|Win32
 		{EF77992F-717B-4EEC-9D9A-57B45C26927A}.Release|x86.Build.0 = Release|Win32
+		{299A2CF2-55AD-4207-BDA7-06A14C78BDC1}.Debug|x64.ActiveCfg = Debug|x64
+		{299A2CF2-55AD-4207-BDA7-06A14C78BDC1}.Debug|x64.Build.0 = Debug|x64
+		{299A2CF2-55AD-4207-BDA7-06A14C78BDC1}.Debug|x86.ActiveCfg = Debug|Win32
+		{299A2CF2-55AD-4207-BDA7-06A14C78BDC1}.Debug|x86.Build.0 = Debug|Win32
+		{299A2CF2-55AD-4207-BDA7-06A14C78BDC1}.Release|x64.ActiveCfg = Release|x64
+		{299A2CF2-55AD-4207-BDA7-06A14C78BDC1}.Release|x64.Build.0 = Release|x64
+		{299A2CF2-55AD-4207-BDA7-06A14C78BDC1}.Release|x86.ActiveCfg = Release|Win32
+		{299A2CF2-55AD-4207-BDA7-06A14C78BDC1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +87,7 @@ Global
 		{56CD7EA2-E832-45CA-84B8-CDD20BDCA36F} = {701CB191-5D77-481A-A7BB-AF73880FB9A7}
 		{2DD2E7EA-75C8-458F-BB0C-78E5F8343181} = {701CB191-5D77-481A-A7BB-AF73880FB9A7}
 		{EF77992F-717B-4EEC-9D9A-57B45C26927A} = {5CD64E6B-1ECE-4EEB-96D1-33539C351200}
+		{299A2CF2-55AD-4207-BDA7-06A14C78BDC1} = {5CD64E6B-1ECE-4EEB-96D1-33539C351200}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C6F18A5-6C35-4525-B3ED-BD1E6CCF2187}
