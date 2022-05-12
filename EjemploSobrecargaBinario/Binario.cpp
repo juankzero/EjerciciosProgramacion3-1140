@@ -1,4 +1,5 @@
 #include "Binario.h"
+#include <cmath>
 
 Binario::Binario()
 {
@@ -11,6 +12,45 @@ Binario::Binario(const char* _byte)
 	for (int i = 0; i < 8; i++)
 		byte[i] = _byte[i] - 48;
 
+}
+
+void Binario::operator~()
+{
+	//invertir los valores del binario this
+
+	for (int i = 0; i < 8; i++) 
+	{
+		this->byte[i] = this->byte[i] == 1 ? 0 : 1;
+	}
+}
+
+Binario& Binario::operator++()
+{
+	// preincremento
+
+	*this = *this + Binario("00000001");
+	return *this;
+}
+
+Binario& Binario::operator++(int)
+{
+	// posincremento
+
+	Binario anterior = *this;
+	*this = *this + Binario("00000001");
+
+	return anterior;
+
+}
+
+int Binario::toDecimal()
+{
+	int resultadoDecimal = 0;
+	for (int i = 8 - 1, j = 0; i >= 0; i--, j++) 
+	{
+		resultadoDecimal += byte[i] * pow(2, j);
+	}
+	return resultadoDecimal;
 }
 
 Binario& operator+(const Binario& _b1, const Binario& _b2)
