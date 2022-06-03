@@ -38,14 +38,15 @@ void ListaCircular::agregarElemento(int _valor)
 
 void ListaCircular::imprimirLista() 
 {
+	cout << std::endl;
 	if (estaVacia())
+	{
+		cout << "{ lista vacia }\n";
 		return;
+	}
 
 
 	Nodo* actual = primero;
-	
-	cout << std::endl;
-
 	
 	do{
 		cout << "[ " << actual->getValor() << " ] ";
@@ -68,4 +69,47 @@ void ListaCircular::imprimirListaRev()
 		cout << "[ " << actual->getValor() << " ] ";
 		actual = actual->getAnterior();
 	} while (actual != ultimo);
+}
+
+bool ListaCircular::eliminarElemento(int _valor)
+{
+	if (estaVacia())
+		return false;
+
+	Nodo* actual = primero;
+
+	do 
+	{
+		if (actual->getValor() == _valor)
+		{
+			if (actual == primero && actual == ultimo)
+			{
+				primero = ultimo = nullptr;
+			}else if (actual == primero)
+			{
+				primero = actual->getSiguiente();
+				primero->setAnterior(ultimo);
+				ultimo->setSiguiente(primero);		
+			}
+			else if (actual == ultimo)
+			{
+				ultimo = actual->getAnterior();
+				ultimo->setSiguiente(primero);
+				primero->setAnterior(ultimo);
+			}
+			else
+			{
+				actual->getAnterior()->setSiguiente(actual->getSiguiente());
+				actual->getSiguiente()->setAnterior(actual->getAnterior());
+			}
+
+			delete actual;
+			return true;
+		}
+
+		actual = actual->getSiguiente();
+
+	} while (actual != primero);
+
+	return false;
 }
